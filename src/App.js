@@ -69,7 +69,7 @@ function App() {
                 <Form.Item label="Email" name="email">
                   <Input placeholder="elon@tesla.com" />
                 </Form.Item>
-                <Form.Item label="Password" name="pasword">
+                <Form.Item label="Password" name="password">
                   <Input placeholder="********" type="password" />
                 </Form.Item>
                 <Form.Item>
@@ -80,7 +80,10 @@ function App() {
                     Forgot password
                   </a>
                 </Form.Item>
-                <Button block onClick={actions.signin}>
+                <Button
+                  block
+                  onClick={isSignIn ? actions.signIn : actions.signup}
+                >
                   {isSignIn ? "Sign In" : "Sign Up"}
                 </Button>
               </Form>
